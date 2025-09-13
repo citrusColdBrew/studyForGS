@@ -1,0 +1,10 @@
+GWASbyCor=function(X,y){
+n=nrow(X)
+r=cor(y,X)
+n=nrow(X)
+t=r/sqrt((1-r^2)/(n-2))
+p=2*(1-pt(abs(t),n-2))
+zeros=p==0
+p[zeros]=1e-10
+return(p)}
+#相关性做GWAS
