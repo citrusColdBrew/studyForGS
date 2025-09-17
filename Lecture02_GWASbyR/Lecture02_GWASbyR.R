@@ -16,11 +16,11 @@ GWASbyCor <- function(X, y) {
 setwd("/Users/Jiabo/Documents/China/SWUN/Conference/2025西安培训/lecture/Code_Materials")
 source("gapit_functions.txt")
 
-myGD <- read.table("mdp_numeric.txt", head = T)
-myGM <- read.table("mdp_SNP_information.txt", head = T)
+myGD <- read.table("/Users/sameen/workspace/statistical genomics/data/mdp_numeric.txt", head = T)
+myGM <- read.table("/Users/sameen/workspace/statistical genomics/data/mdp_SNP_information.txt", head = T)
 
-source("G2P.R")
-source("GWASbyCor.R")
+source("/Users/sameen/workspace/statistical genomics/function/G2P.R")
+source("/Users/sameen/workspace/statistical genomics/function/GWASbyCor.R")
 X <- myGD[, -1]
 index1to5 <- myGM[, 2] < 6
 X1to5 <- X[, index1to5]
